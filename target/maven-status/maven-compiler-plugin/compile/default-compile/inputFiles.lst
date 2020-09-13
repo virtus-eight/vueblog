@@ -2,6 +2,8 @@ C:\github\vue_blog\src\main\java\com\vera\controller\UserController.java
 C:\github\vue_blog\src\main\java\com\vera\CodeGenerator.java
 C:\github\vue_blog\src\main\java\com\vera\util\JwtUtils.java
 C:\github\vue_blog\src\main\java\com\vera\common\exception\GlobalExceptionHander.java
+C:\github\vue_blog\src\main\java\com\vera\config\CorsConfig.java
+C:\github\vue_blog\src\main\java\com\vera\controller\AccountController.java
 C:\github\vue_blog\src\main\java\com\vera\shiro\AccountProfile.java
 C:\github\vue_blog\src\main\java\com\vera\mapper\BlogMapper.java
 C:\github\vue_blog\src\main\java\com\vera\VueBlogApplication.java
@@ -16,6 +18,7 @@ C:\github\vue_blog\src\main\java\com\vera\service\impl\UserServiceImpl.java
 C:\github\vue_blog\src\main\java\com\vera\common\lang\Result.java
 C:\github\vue_blog\src\main\java\com\vera\config\ShiroConfig.java
 C:\github\vue_blog\src\main\java\com\vera\config\MybatisPlusConfig.java
+C:\github\vue_blog\src\main\java\com\vera\common\exception\LoginDto.java
 C:\github\vue_blog\src\main\java\com\vera\mapper\UserMapper.java
 C:\github\vue_blog\src\main\java\com\vera\shiro\JwtFilter.java
 C:\github\vue_blog\src\main\java\com\vera\entity\Blog.java

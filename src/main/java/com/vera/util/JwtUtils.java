@@ -1,6 +1,7 @@
 package com.vera.util;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Data;
@@ -16,7 +17,7 @@ import java.util.Date;
 @Slf4j
 @Data
 @Component
-@ConfigurationProperties(prefix = "vera.jwt")
+@ConfigurationProperties(prefix = "markerhub.jwt")
 public class JwtUtils {
 
     private String secret;

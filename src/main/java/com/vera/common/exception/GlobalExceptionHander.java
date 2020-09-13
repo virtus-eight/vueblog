@@ -30,11 +30,21 @@ public class GlobalExceptionHander {
     /*捕获运行期异常*/
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public Result handler(MethodArgumentNotValidException e){
-        log.error("实体校验时异常：------------{}");
+        log.error("实体校验时异常：------------{1}");
         BindingResult bindingResult = e.getBindingResult();
         ObjectError objectError = bindingResult.getAllErrors().stream().findFirst().get();
         return Result.fail(objectError.getDefaultMessage());
     }
+
+    /*抛出异常代码给前端*/
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    /*捕获运行期异常*/
+    @ExceptionHandler(value = IllegalArgumentException.class)
+    public Result handler(IllegalArgumentException e){
+        log.error("为空");
+       return Result.fail(e.getMessage());
+    }
+
 
     /*抛出异常代码给前端*/
     @ResponseStatus(HttpStatus.BAD_REQUEST)

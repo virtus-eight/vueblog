@@ -1,10 +1,12 @@
 com\vera\CodeGenerator.class
 com\vera\mapper\UserMapper.class
 com\vera\shiro\AccountProfile.class
+com\vera\config\CorsConfig.class
 com\vera\config\ShiroConfig.class
 com\vera\entity\User.class
 com\vera\CodeGenerator$1.class
 com\vera\service\BlogService.class
+com\vera\common\exception\LoginDto.class
 com\vera\util\JwtUtils.class
 com\vera\controller\BlogController.class
 com\vera\common\lang\Result.class
@@ -21,3 +23,4 @@ com\vera\entity\Blog.class
 com\vera\VueBlogApplication.class
 com\vera\controller\UserController.class
 com\vera\common\exception\GlobalExceptionHander.class
+com\vera\controller\AccountController.class
