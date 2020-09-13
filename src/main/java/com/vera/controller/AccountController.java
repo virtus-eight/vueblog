@@ -46,7 +46,10 @@ public class AccountController {
         );
     }
 
+
+
     //登录后才能使用
+    @RequiresAuthentication
     @GetMapping("/logout")
     public Result logout(){
         //退出用户

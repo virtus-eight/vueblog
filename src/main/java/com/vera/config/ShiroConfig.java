@@ -30,7 +30,6 @@ public class ShiroConfig {
     @Bean
     public SessionManager sessionManager(RedisSessionDAO redisSessionDAO) {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-
         // inject redisSessionDAO
         sessionManager.setSessionDAO(redisSessionDAO);
 

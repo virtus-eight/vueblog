@@ -41,7 +41,7 @@ public class GlobalExceptionHander {
     /*捕获运行期异常*/
     @ExceptionHandler(value = IllegalArgumentException.class)
     public Result handler(IllegalArgumentException e){
-        log.error("为空");
+        log.error("ArgumentException");
        return Result.fail(e.getMessage());
     }
 

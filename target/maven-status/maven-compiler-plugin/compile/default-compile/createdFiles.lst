@@ -11,6 +11,7 @@ com\vera\util\JwtUtils.class
 com\vera\controller\BlogController.class
 com\vera\common\lang\Result.class
 com\vera\service\UserService.class
+com\vera\util\ShiroUtil.class
 com\vera\service\impl\UserServiceImpl.class
 com\vera\shiro\AccountRealm.class
 com\vera\shiro\JwtToken.class
