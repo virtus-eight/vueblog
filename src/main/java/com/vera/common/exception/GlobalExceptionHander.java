@@ -41,8 +41,10 @@ public class GlobalExceptionHander {
     /*捕获运行期异常*/
     @ExceptionHandler(value = IllegalArgumentException.class)
     public Result handler(IllegalArgumentException e){
-        log.error("ArgumentException");
-       return Result.fail(e.getMessage());
+        log.error("IllegalArgumentException");
+        Result fail = Result.fail(e.getMessage());
+        System.out.println(fail);
+        return fail;
     }
 
 
