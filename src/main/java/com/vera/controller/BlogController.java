@@ -55,22 +55,24 @@ public class BlogController {
 
 
     /**
-     * @param blog 传入的页码 默认值是1
+     * @param blog
      */
     @RequiresAuthentication
     @PostMapping("/edit")
-    public Result edit(@Validated @RequestBody Blog blog){
+    public Result edit(@RequestBody Blog blog){
         System.out.println(blog);
-        Blog temp=null;
+        Blog temp;
         //根据是否有id 判断是编辑还是添加
         if (blog.getId()!=null){
             temp=blogService.getById(blog.getId());
             //只能编辑自己的文章
             //判断userid是不是现在登录的用户
-            Assert.isTrue(temp.getUserId()== ShiroUtil.getProfile().getId(),"没有权限编辑");
+            System.out.println("111");
+            Assert.isTrue(temp.getUserId().equals(ShiroUtil.getProfile().getId()),"没有权限编辑");
         }else {
             //添加
             temp=new Blog();
+            System.out.println("111");
             temp.setUserId(ShiroUtil.getProfile().getId());
             System.out.println(ShiroUtil.getProfile().getId());
             temp.setCreated(LocalDateTime.now());//当前时间
@@ -78,6 +80,7 @@ public class BlogController {
         }
         //拷贝数据除了"id","userID","created","status"
         BeanUtil.copyProperties(blog,temp,"id","userId","created","status");
+        System.out.println(temp+"1111");
         //保持
         blogService.saveOrUpdate(temp);
         return Result.succ("null");

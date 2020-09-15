@@ -21,7 +21,7 @@ public class GlobalExceptionHander {
     /*捕获运行期异常*/
     @ExceptionHandler(value = ShiroException.class)
     public Result handler(ShiroException e){
-        log.error("运行时异常：------------{}");
+        log.error("ShiroException");
         return Result.fail("401",e.getMessage(),null);
     }
 
@@ -53,7 +53,8 @@ public class GlobalExceptionHander {
     /*捕获运行期异常*/
     @ExceptionHandler(value = RuntimeException.class)
     public Result handler(RuntimeException e){
-        log.error("运行时异常：------------{}");
+        System.out.println(e.getMessage());
+        log.error("RuntimeException");
         return Result.fail(e.getMessage());
     }
 }
